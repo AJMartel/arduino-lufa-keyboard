@@ -1,7 +1,7 @@
 Arduino LUFA Keyboard
 =====================
 
-A fork of Darran's Arduino UNO Keyboard HID firmware version 0.3 (http://hunt.net.nz/users/darran/weblog/b3029/Arduino_UNO_Keyboard_HID_version_03.html) which in turn is built on the wonderful LUFA (Lightweight USB Framework for AVRs) USB framework (http://www.fourwalledcubicle.com/LUFA.php). LUFA has undergone improvements since the last version of this library (0.3), so it no longer works with the latest versions of LUFA, so I took up this library to adapt it to the new LUFA as well as to allow it to be easily accessible to people who'd like to further contribute.
+A fork of [Darran's Arduino UNO Keyboard HID firmware version 0.3](http://hunt.net.nz/users/darran/weblog/b3029/Arduino_UNO_Keyboard_HID_version_03.html) which in turn is built on the wonderful [LUFA (Lightweight USB Framework for AVRs)](http://www.fourwalledcubicle.com/LUFA.php). LUFA has undergone improvements since the last version of this library (0.3), so it no longer works with the latest versions of LUFA, so I took up this library to adapt it to the new LUFA as well as to allow it to be easily accessible to people who'd like to further contribute.
 
 This library can be compiled into USB firmware that, when flashed onto an Arduino (UNO R3 for now), will make the Arduino report itself and behave as a USB keyboard.
 

@@ -65,7 +65,7 @@
 /** LED mask for the library LED driver, to indicate that the USB interface is busy. */
 #define LEDMASK_BUSY             (LEDS_LED1 | LEDS_LED2)		
 
-// CUSTOM
+/** The rate of communication. */
 #define BAUD_RATE 9600
 
 /* Function Prototypes: */

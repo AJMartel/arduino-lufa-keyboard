@@ -62,9 +62,13 @@
 # 	Since the ATMEGA8U2 part is not directly supported by the current
 #	versions of either avrdude or dfu-programmer, we specify a dummy
 #	part; AT90USB82 which is close enough in memory size and organization
-MCU = atmega8u2
-MCU_AVRDUDE = at90usb82
-MCU_DFU = at90usb82
+MCU = atmega16u2
+MCU_AVRDUDE = atmega16u2
+MCU_DFU = atmega16u2
+
+# The target microcontroller architecture. Probably AVR8 for 8-bit and AVR32 for
+# 32-bit. The Arduino Uno is AVR8.
+ARCH = AVR8
 
 # Specify the Arduino model using the assigned PID.  This is used by Descriptors.c
 #   to set PID and product descriptor string
@@ -77,7 +81,7 @@ ARDUINO_MODEL_PID = 0x0001
 # Target board (see library "Board Types" documentation, NONE for projects not requiring
 # LUFA board drivers). If USER is selected, put custom board drivers in a directory called 
 # "Board" inside the application directory.
-BOARD  = USER
+BOARD  = UNO
 
 
 # Processor frequency.
@@ -107,6 +111,9 @@ F_CPU = 16000000
 #     CPU clock adjust registers or the clock division fuses), this will be equal to F_CPU.
 F_CLOCK = $(F_CPU)
 
+# Newer versions of LUFA use this instead of F_CLOCK?
+F_USB = $(F_CPU)
+
 
 # Output format. (can be srec, ihex, binary)
 FORMAT = ihex
@@ -123,7 +130,7 @@ OBJDIR = .
 
 
 # Path to the LUFA library
-LUFA_PATH = ../..
+LUFA_PATH = ./lufa
 
 
 # LUFA library compile-time options
